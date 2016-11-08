@@ -1,7 +1,8 @@
 Configuration FirewallScriptResource            
 {            
-    Import-DscResource -ModuleName PSDesiredStateConfiguration            
-    Node localhost            
+    param ($MachineName)
+	Import-DscResource -ModuleName PSDesiredStateConfiguration            
+    Node $MachineName            
     {            
         Script DisableFirewall            
         {            

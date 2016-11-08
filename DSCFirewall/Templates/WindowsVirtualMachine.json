@@ -50,7 +50,7 @@
   "variables": {
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer",
-    "OSDiskName": "osdiskforwindowssimple2",
+    "OSDiskName": "osdiskforwindowssimple7",
     "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
@@ -224,11 +224,11 @@
                       "configuration": {
                         "url": "https://github.com/NillsF/DSCFirewall/raw/master/DSCFirewall/DSC/firewallOff.zip",
                         "script": "firewallOff.ps1",
-                        "function": "firewallOff.ps1/FirewallScriptResource"
+                        "function": "FirewallScriptResource"
                       },
-                        "configurationArguments": {
-                            "nodeName": "[variables('vmName')]"
-                        }
+                      "configurationArguments": {
+                        "MachineName": "[variables('vmName')]"
+                      }
                     },
                     "protectedSettings": null
                 }
