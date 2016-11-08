@@ -50,7 +50,7 @@
   "variables": {
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer",
-    "OSDiskName": "osdiskforwindowssimple1",
+    "OSDiskName": "osdiskforwindowssimple2",
     "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
@@ -221,18 +221,16 @@
                     "autoUpgradeMinorVersion": true,
                     "forceUpdateTag": "[parameters('firewallOffUpdateTagVersion')]",
                     "settings": {
-                        "configuration": {
-                            "url": "[concat(parameters('_artifactsLocation'), '/', variables('firewallOffArchiveFolder'), '/', variables('firewallOffArchiveFileName'))]",
-                            "script": "firewallOff.ps1",
-                            "function": "Main"
-                        },
+                      "configuration": {
+                        "url": "https://github.com/NillsF/DSCFirewall/raw/master/DSCFirewall/DSC/firewallOff.zip",
+                        "script": "firewallOff.ps1",
+                        "function": "firewallOff.ps1/FirewallScriptResource"
+                      },
                         "configurationArguments": {
                             "nodeName": "[variables('vmName')]"
                         }
                     },
-                    "protectedSettings": {
-                        "configurationUrlSasToken": "[parameters('_artifactsLocationSasToken')]"
-                    }
+                    "protectedSettings": null
                 }
             }
         ]
