@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "adminUsername": {
-            "value": null
+            "value": "nilfranadmin"
         },
         "dnsNameForPublicIP": {
             "value": null

@@ -34,6 +34,7 @@
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <Content Include="Templates\WindowsVirtualMachine.json" />
     <Content Include="Templates\WindowsVirtualMachine.parameters.json" />
+    <Content Include="DSC\firewallOff.ps1" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
